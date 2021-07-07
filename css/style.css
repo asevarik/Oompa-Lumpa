@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 10px;
+}
+
+/* --------------------------- THIS IS THE WRAPPER -------------------------- */
+.wrapper {
+    max-width: 120em;
+    margin: 0 auto;
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    height: 100vh;
+    column-gap: 2em;
+}
+
+/* ------------------------ THIS IS WRAPPER CHILDREN ------------------------ */
+.wrapper > * > * {
+    font-size: 2em;
+}
+
+/* ---------------------- THIS IS OUR CUSTOM CONTAINERS --------------------- */
+
+.stacked-container {
+    display: flex;
+    row-gap: 2em;
+    flex: 3;
+    flex-direction: column;
+    justify-items: stretch;
+}
+
+.horizontal-container {
+    display: flex;
+    column-gap: 1em;
+    flex-direction: row;
+    flex: 6;
+    padding-bottom: 2em;
+}
+
+.sidebar {
+    flex: 1;
+    padding: 1em;
+    font-size: 2em;
+    border: 1px solid steelblue;
+}
+
+.navbar {
+    padding: 1em;
+    flex: 1;
+    border: 1px solid steelblue;
+}
+
+.wallet {
+    padding: 1em;
+    flex: 6;
+    border: 1px solid steelblue;
+    border-radius: 0.5em;
+}
+
+.quick-transfer {
+    padding: 1em;
+    flex: 1;
+    border: 1px solid steelblue;
+    border-radius: 0.5em;
+}
+
+.activity {
+    padding: 1em;
+    flex: 1;
+    border: 1px solid steelblue;
+    border-radius: 0.5em;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                         Media queries for reference                        */
+/* -------------------------------------------------------------------------- */
+
+/* 
+mobile: less than 768px
+tablet: more than 769px
+desktop: more than 1024px
+widescreen: more than 1216px
+fullhd: more than 1408px 
+*/
+
+/* -------------------------------------------------------------------------- */
+/*                        mobile media query goes here                        */
+/* -------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .stacked-container,
+    .wrapper,
+    .horizontal-container {
+        flex-flow: column;
+        flex: none;
+    }
+
+    .wrapper {
+        display: flex;
+    }
+
+    .navbar {
+        flex: 1;
+    }
+    
+    .navbar {
+        flex: 1;
+    }
+    
+    .horizontal-container {
+        row-gap: 1em;
+        padding-bottom: 1em;
+        flex: 10;
+    }
+    
+}
