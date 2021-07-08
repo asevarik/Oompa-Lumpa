@@ -62,14 +62,15 @@ body {
     grid-area: nav;
     grid-column: 1/-1;
     display: flex;
-    gap: 15%;
     font-size: 2em;
+    align-items: center;
 }
 
 .branding{
     display: flex;
     gap: 1em;
     align-items: center;
+    margin-right: 15%;
 }
 
 .search {
@@ -77,6 +78,12 @@ body {
     align-items: center;
     gap: 1em;
     border-bottom: 2px solid #85858575;
+    margin-right: 7.5%;
+}
+
+.mr5 {
+    margin-right: 5%;
+    font-size: 2ch;
 }
 
 .searchbar {
@@ -123,6 +130,18 @@ body {
 
 .icon {
     font-size: 3ch;
+}
+
+.avatar {
+    flex: 1;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.avatar img {
+    max-width: 3.2em;
+    max-height: 3.2em;
+    border-radius: 100%;
 }
 
 /* -------------------------------------------------------------------------- */
