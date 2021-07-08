@@ -6,35 +6,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- include stylesheet here -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/colors.css">
+
+    <!-- Include google fonts here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Nunito:wght@300;400;700&family=Poppins:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Include remix icons here  -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
 </head>
 
 <body>
     <div class="wrapper">
-        
+
         <aside class="sidebar">
-            Sidebar
+
         </aside>
 
-        <div class="stacked-container">
-            <nav class="navbar">
-                Navbar
-            </nav>
+        <nav class="navbar">
+            <div class="branding">
+                <i class="ri-money-dollar-box-fill teal icon"></i> 
+                <h5>Banking System</h5>
+            </div>
             
-            <div class="wallet">
-                Wallet
+            <div class="search">
+                <i class="ri-search-2-line grey"></i>
+                <input type="text" name="search" class="searchbar" placeholder="Search for any customer, cards, accounts...">
             </div>
-    
-            <div class="horizontal-container">
-                <div class="quick-transfer">
-                    Transfers
-                </div>
-        
-                <div class="activity">
-                    My Activity
-                </div>
+
+            <div class="mail">
+                <i class="ri-mail-unread-line"></i> 
             </div>
+
+            <div class="notifications">
+                <i class="ri-alarm-warning-line"></i> 
+            </div>
+
+            <div class="avatar">
+                
+            </div>
+
+        </nav>
+
+        <div class="wallet">
+            Wallet
         </div>
+
+        <div class="quick-transfer">
+            Transfers
+        </div>
+
+        <div class="activity">
+            My Activity
+        </div>
+
     </div>
 </body>
 
