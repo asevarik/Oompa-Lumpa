@@ -12,68 +12,72 @@ body {
 .wrapper {
     max-width: 120em;
     margin: 0 auto;
-    display: flex;
-    align-items: stretch;
-    flex-direction: row;
+
+    display: grid;
+    grid-gap: 2em;
+
+    grid-template-areas: 
+        "side nav nav"
+        "side wal wal"
+        "side tra act"
+    ;
+    
     height: 100vh;
-    column-gap: 2em;
+}
+
+.wrapper-history {
+    max-width: 120em;
+    margin: 0 auto;
+    
+    display: grid;
+    grid-gap: 2em;
+    
+    grid-template-areas: 
+    "side nav nav"
+    "side his his"
+    "side his his"
+    ;
+
+    height: 100vh;
 }
 
 /* ------------------------ THIS IS WRAPPER CHILDREN ------------------------ */
-.wrapper > * > * {
+.wrapper > * {
     font-size: 2em;
+    padding: 1em;
+    border: 1px solid steelblue;
+}
+
+.wrapper-history > * {
+    font-size: 2em;
+    padding: 1em;
+    border: 1px solid steelblue;
 }
 
 /* ---------------------- THIS IS OUR CUSTOM CONTAINERS --------------------- */
 
-.stacked-container {
-    display: flex;
-    row-gap: 2em;
-    flex: 3;
-    flex-direction: column;
-    justify-items: stretch;
-}
-
-.horizontal-container {
-    display: flex;
-    column-gap: 1em;
-    flex-direction: row;
-    flex: 6;
-    padding-bottom: 2em;
-}
-
 .sidebar {
-    flex: 1;
-    padding: 1em;
-    font-size: 2em;
-    border: 1px solid steelblue;
+    grid-area: side;
 }
 
 .navbar {
-    padding: 1em;
-    flex: 1;
-    border: 1px solid steelblue;
+    grid-area: nav;
 }
 
 .wallet {
-    padding: 1em;
-    flex: 6;
-    border: 1px solid steelblue;
-    border-radius: 0.5em;
+    grid-area: wal;
 }
 
 .quick-transfer {
-    padding: 1em;
-    flex: 1;
-    border: 1px solid steelblue;
-    border-radius: 0.5em;
+    grid-area: tra;
 }
 
 .activity {
-    padding: 1em;
-    flex: 1;
-    border: 1px solid steelblue;
-    border-radius: 0.5em;
+    grid-area: act;
+}
+
+.history {
+    grid-area: his;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -92,34 +96,51 @@ fullhd: more than 1408px
 /*                        mobile media query goes here                        */
 /* -------------------------------------------------------------------------- */
 
+/* ------------------------ Layout for the main page ------------------------ */
+
 @media only screen and (max-width: 768px) {
+    
+    .wrapper {
+        grid-template-areas: 
+        "nav"
+        "wal"
+        "wal"
+        "wal"
+        "tra"
+        "tra"
+        "tra"
+        "act"
+        "act"
+        "act"
+        ;
+
+        height: 200vh;
+    }
+    
     .sidebar {
         display: none;
     }
-
-    .stacked-container,
-    .wrapper,
-    .horizontal-container {
-        flex-flow: column;
-        flex: none;
-    }
-
-    .wrapper {
-        display: flex;
-    }
-
-    .navbar {
-        flex: 1;
-    }
     
-    .navbar {
-        flex: 1;
+    /* ----------------------- Layout for the history page ---------------------- */
+
+    .wrapper-history {
+        grid-template-areas: 
+        "nav"
+        "his"
+        "his"
+        "his"
+        "his"
+        "his"
+        "his"
+        ;
+        height: 200vh;
     }
-    
-    .horizontal-container {
-        row-gap: 1em;
-        padding-bottom: 1em;
-        flex: 10;
-    }
-    
+}
+.column-1
+{
+    grid-template-areas:
+    "trans ins ins "
+    "trans ins ins"
+    "trans ins ins" 
+    ;
 }
