@@ -1,0 +1,30 @@
+/* -------------------------------------------------------------------------- */
+/*                                   colors                                   */
+/* -------------------------------------------------------------------------- */
+
+/*
+Add all the colors here :
+
+
+#4ED39B
+#00B2FF
+#22A3AB
+#4DB245
+#FF9900
+#22A3AB
+
+gradient 1 - start :#12BAE8  , stop :#3FCDAE 
+gradient 2 - start : #F8A20C , stop : #D7CC44
+gradient 3 - start : #A63BCD , stop : #5549AE
+gradient 4 - start : #A8E02E , stop : #4DB245
+gradient 5 - start : # , stop : #
+
+*/
+
+.teal {
+    color: #3FCDAE;
+}
+
+.grey {
+    color: #636363
+}
