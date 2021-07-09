@@ -1,0 +1,57 @@
+@media only screen and (max-width: 768px) {
+    .wrapper {
+        grid-template-areas:
+            "nav"
+            "wal"
+            "tra"
+            "act";
+        grid-template-rows: 1fr 6fr 6fr 6fr;
+        height: 200vh;
+
+        &-about {
+            grid-template-areas:
+                "nav"
+                "container";
+            grid-template-rows: 1fr 300vh;
+            grid-template-columns: 1fr;
+            grid-auto-flow: column;
+            justify-items: stretch;
+            // height: 200vh;
+            
+            .navbar {
+                grid-area: nav;
+                flex: 1;
+                .search, .avatar, .mr5 {
+                    display: none;
+                }
+                padding: 1em;
+            }
+
+            .about-container {
+                grid-template-areas: "c1" "c2" "c3";
+                grid-template-columns: auto;
+                grid-template-rows: repeat(3, 1fr);
+
+                .column-1 {
+                    grid-area: c1;
+                }
+                .column-2 {
+                    grid-area: c2;
+                }
+                .column-3 {
+                    grid-area: c3;
+                }
+            }
+        }
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+
+    .statistics-container {
+        display: grid;
+        background-color: blue;
+    }
+}
