@@ -1,0 +1,53 @@
+.wrapper-about {
+    max-width: 120em;
+    margin: 0 auto;
+
+    display: grid;
+    grid-gap: 4em;
+
+    grid-template-areas:
+        "side nav"
+        "side about";
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 6fr;
+    height: 100vh;
+}
+
+.about-container {
+    display: grid;
+
+    grid-template-areas: "col1 col2 col3";
+    padding: 4em;
+    background-color: #f5f5f5;
+    margin-bottom: 2em;
+    border-radius: 2em;
+    gap: 4em;
+
+    &>* {
+        display: flex;
+        flex-flow: column;
+        border-radius: 1em;
+        padding: 1em;
+        background: #fafafa;
+        font-size: 1.4em;
+        box-shadow: 4px 2px 15px 0px rgba(0, 0, 0, 0.2);
+    }
+    
+    // Priyanshu Was Here 
+    // .column-1 > * {
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: center;
+    // }
+
+    .photo-avatar {
+        background-color: $bg-color;
+        width: 10em;
+        height: 10em;
+        border-radius: 100%;
+    }
+}
+
+.shadow {
+    box-shadow: 4px 2px 15px 0px rgba(0, 0, 0, 0.2);
+}

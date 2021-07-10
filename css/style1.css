@@ -1,0 +1,133 @@
+/* --------------------------- THIS IS THE WRAPPER -------------------------- */
+.wrapper {
+    max-width: 120em;
+    margin: 0 auto;
+
+    display: grid;
+    grid-gap: 4em;
+
+    grid-template-areas:
+        "side nav nav"
+        "side wal wal"
+        "side tra act";
+    grid-template-rows: 1fr 3fr 3fr;
+    height: 100vh;
+}
+
+.wrapper-history {
+    max-width: 120em;
+    margin: 0 auto;
+
+    display: grid;
+    grid-gap: 4em;
+
+    grid-template-areas:
+        "side nav nav"
+        "side his his"
+        "side his his";
+
+    height: 100vh;
+}
+
+
+/* ------------------------ THIS IS WRAPPER CHILDREN ------------------------ */
+.wrapper > *:not(.sidebar) {
+    padding: 1em;
+}
+
+.wrapper-history > * {
+    padding: 1em;
+}
+
+/* ---------------------- THIS IS OUR CUSTOM CONTAINERS --------------------- */
+
+
+.wallet {
+    grid-area: wal;
+    background-color: #f5f5f5;
+    border-radius: 1em;
+    box-shadow: 4px 2px 15px 0px rgba(0, 0, 0, 0.2);
+}
+
+.quick-transfer {
+    grid-area: tra;
+    margin-bottom: 2em;
+    border-radius: 1em;
+    background-color: #f5f5f5;
+    box-shadow: 4px 2px 15px 0px rgba(0, 0, 0, 0.2);
+}
+
+.activity {
+    grid-area: act;
+    margin-bottom: 2em;
+    border-radius: 1em;
+    background-color: #f5f5f5;
+    box-shadow: 4px 2px 15px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                         Media queries for reference                        */
+/* -------------------------------------------------------------------------- */
+
+/* 
+mobile: less than 768px
+tablet: more than 769px
+desktop: more than 1024px
+widescreen: more than 1216px
+fullhd: more than 1408px 
+*/
+
+/* -------------------------------------------------------------------------- */
+/*                        mobile media query goes here                        */
+/* -------------------------------------------------------------------------- */
+
+/* ------------------------ Layout for the main page ------------------------ */
+
+
+.about-container {
+    display: grid;
+    
+    grid-template-areas: "col1 col2 col3";
+    padding: 4em;
+    background-color: #f5f5f5;
+    margin-bottom: 2em;
+    border-radius: 2em;
+    gap: 4em;
+}
+/* bahiya ji ye andar k 3 column ka he children */
+.about-container > * {
+    display: flex;
+    flex-flow: column;
+    border-radius: 1em;
+    padding: 1em;
+    background: #fafafa;
+    font-size: 1.4em;
+    box-shadow: 4px 2px 15px 0px rgba(0, 0, 0, 0.2);
+}
+
+.shadow {
+    box-shadow: 4px 2px 15px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+.statistics-container {
+    display: grid;
+    grid-template-areas: "col1 col2";
+    padding: 4em;
+    background-color: #f5f5f5;
+    margin-bottom: 2em;
+    border-radius: 2em;
+    gap: 4em;
+}
+.statistics-container > * {
+    display: flex;
+    flex-flow: column;
+    border-radius: 1em;
+    padding: 1em;
+    background: #fafafa;
+    font-size: 1.4em;
+    box-shadow: 4px 2px 15px 0px rgba(0, 0, 0, 0.2);
+}
